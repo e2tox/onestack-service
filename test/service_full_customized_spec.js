@@ -4,6 +4,7 @@
  * Test Module dependencies.
  */
 
+
 // Init the configuration module
 var service = require('../index');
 var should = require('should');

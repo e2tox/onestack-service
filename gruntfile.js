@@ -125,7 +125,7 @@ module.exports = function (grunt) {
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['env:test', 'watch:test']);
+    grunt.registerTask('default', ['watch:test']);
 
     // Lint task(s).
     grunt.registerTask('lint', ['jshint', 'jscs', 'jsbeautifier']);
