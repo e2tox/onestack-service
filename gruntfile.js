@@ -96,10 +96,10 @@ module.exports = function (grunt) {
                     reporter: 'mocha-teamcity-reporter',
                     coverage: false,
                     check: {
-                        lines: 80,
-                        statements: 80,
-                        branches: 80,
-                        functions: 80
+                        lines: 60,
+                        statements: 60,
+                        branches: 30,
+                        functions: 60
                     },
                     //root: './lib', // define where the cover task should consider the root of libraries that are covered by tests
                     reportFormats: ['teamcity', 'html']
