@@ -1,7 +1,6 @@
 ---
 # application info
 TITLE: 'OneStack'
-VERSION: '1.0'
 DESCRIPTION: 'OneStack Enterprise Server'
 KEYWORDS: 'api rest json'
 URL: 'http://sandbox.onestack.io/scaffold/v1/'
@@ -13,4 +12,7 @@ PORT: 11020
 # dirs
 DATA_DIR: './data'  # absolute path
 LOG_DIR: './logs'  # relative path to server.js
+
+# performance
+DISABLE_PER_REQUEST_LOG: 1
 

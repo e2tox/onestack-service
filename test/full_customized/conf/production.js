@@ -8,6 +8,7 @@ module.exports = function (kernel, settings) {
 
     //require('winston-sendmail');
 
+    // override default logger
     kernel.logger = {
         transports: [
             new winston.transports.Console({
@@ -15,22 +16,23 @@ module.exports = function (kernel, settings) {
                 colorize: true
             }),
             new(winston.transports.DailyRotateFile)({
-                level: 'info', // silly, debug, verbose, info, warn, error
-                filename: path.join(settings.LOG_DIR, 'access-'),
+                level: 'verbose', // silly, debug, verbose, info, warn, error
+                filename: path.join(settings.LOG_DIR, 'app-'),
                 datePattern: 'yyyy-MM-dd.log',
                 maxsize: 5242880 /* 5MB */
             })
         ]
     };
 
+    // override default error logger
     kernel.errorLogger = {
         transports: [
             new winston.transports.Console({
-                level: 'error',
+                level: 'warn',
                 colorize: true
             }),
             new(winston.transports.DailyRotateFile)({
-                level: 'error',
+                level: 'warn', // warn, error
                 filename: path.join(settings.LOG_DIR, 'error-'),
                 datePattern: 'yyyy-MM-dd.log',
                 maxsize: 5242880 /* 5MB */
@@ -38,7 +40,13 @@ module.exports = function (kernel, settings) {
         ]
     };
 
+    // authenticate using Basic Auth
     kernel.authenticateTenant = function(username, password) {
+        return true;
+    };
+
+    // authenticate using IP filter
+    kernel.authenticateIPAddr = function(ipaddress) {
         return true;
     };
 

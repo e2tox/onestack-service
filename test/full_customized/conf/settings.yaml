@@ -1,7 +1,7 @@
 ---
 # application info
-TITLE: 'Full customized'
-VERSION: '1.0'
+ID: 'TFC'
+TITLE: 'Test Full customized'
 DESCRIPTION: 'OneStack Enterprise Server'
 KEYWORDS: 'api rest json'
 URL: 'http://sandbox.onestack.io/scaffold/v1/'
