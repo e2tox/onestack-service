@@ -2,7 +2,7 @@ OneStack Enterprise Service Platform
 ====================================
 
 [![Build Status](https://img.shields.io/travis/e2tox/OneStack.svg?style=flat)](https://travis-ci.org/e2tox/OneStack)
-[![Coverage Status](https://img.shields.io/coveralls/e2tox/openstack/master.svg?style=flat)](https://coveralls.io/r/e2tox/openstack?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/e2tox/onestack/master.svg?style=flat)](https://coveralls.io/r/e2tox/onestack?branch=master)
 
 OneStack is an platform for developing enterprise applications.
 
@@ -43,6 +43,11 @@ You should view the test coverage from `test/coverage.html`
 
 ## Versions
 
+#### 1.2.0
+Add customized error message support
+
 #### 1.0.0
 Integrate Hapi with swagger interface
+
+## Todo
 

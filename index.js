@@ -7,6 +7,7 @@
 'use strict';
 
 var Server = require('./lib');
+var kernel = require('onestack');
 
 // return a new instance of onestack service
-module.exports = new Server(require('onestack'));
+module.exports = new Server(kernel);

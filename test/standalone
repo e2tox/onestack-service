@@ -6,8 +6,10 @@
  * Test Module dependencies.
  */
 
+
 // Init the configuration module
 var service = require('../index');
+
 
 service.init(__dirname + '/full_customized');
 service.start();

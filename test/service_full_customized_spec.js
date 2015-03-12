@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * Test Module dependencies.
+ * Test Module dependencies
  */
 
 
-// Init the configuration module
+// Init the configuration module..
 var onestack = require('../index');
 var should = require('should');
 
@@ -22,14 +22,14 @@ describe('Init with full customized settings', function () {
         (function () {
             onestack.init(__dirname + '/full_customized');
             onestack.start(function() {
-                onestack.stop(function(){
+                onestack.stop(function() {
                     done();
                 });
             });
         }).should.not.throw();
     });
     it('should able to check service status', function (done) {
-        (function () {
+        //(function () {
             onestack.init(__dirname + '/full_customized');
             onestack.server.inject({
                 method: 'GET',
@@ -38,6 +38,6 @@ describe('Init with full customized settings', function () {
                 res.statusCode.should.equal(200);
                 done();
             });
-        }).should.not.throw();
+        //}).should.not.throw();
     });
 });

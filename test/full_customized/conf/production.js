@@ -11,7 +11,7 @@ module.exports = function (kernel, settings) {
     kernel.logger = {
         transports: [
             new winston.transports.Console({
-                level: 'info',
+                level: 'silly',
                 colorize: true
             }),
             new(winston.transports.DailyRotateFile)({
@@ -36,6 +36,10 @@ module.exports = function (kernel, settings) {
                 maxsize: 5242880 /* 5MB */
             })
         ]
+    };
+
+    kernel.authenticateTenant = function(username, password) {
+        return true;
     };
 
     //if (settings.MAILER) {
