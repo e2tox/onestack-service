@@ -8,8 +8,8 @@
 
 
 // Init the configuration module
-var service = require('../index');
+var path = require('path');
+var service = require('../../../index');
 
-
-service.init(__dirname + '/full_customized');
+service.init(path.join(__dirname, '..'));
 service.start();

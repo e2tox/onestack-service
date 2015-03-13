@@ -2,6 +2,7 @@
 logs/*
 !logs/README.md
 *.log
+*.log.*
 
 # Runtime data
 pids

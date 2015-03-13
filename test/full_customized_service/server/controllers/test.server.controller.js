@@ -1,5 +1,6 @@
 'use strict';
 
+
 /**
  * Module dependencies.
  */
@@ -11,7 +12,7 @@ module.exports = function (server) {
     // Add the route
     server.route({
         method: 'GET',
-        path: '/api/v1/status',
+        path: '/api/v1/test',
         handler: function (request, reply) {
             reply('up');
         },
@@ -29,7 +30,7 @@ module.exports = function (server) {
 
     server.route({
         method: 'POST',
-        path: '/api/v1/status',
+        path: '/api/v1/test',
         handler: function (request, reply) {
             //throw new Error('hahaha');
             reply('up');

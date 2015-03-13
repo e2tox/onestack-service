@@ -13,6 +13,5 @@ PORT: 11020
 DATA_DIR: './data'  # absolute path
 LOG_DIR: './logs'  # relative path to server.js
 
-# performance
-DISABLE_PER_REQUEST_LOG: 1
-
+# optimize performance
+DISABLE_PER_REQUEST_LOG: 0

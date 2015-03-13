@@ -12,11 +12,11 @@ module.exports = function (kernel, settings) {
     kernel.logger = {
         transports: [
             new winston.transports.Console({
-                level: 'silly',
+                level: 'verbose',
                 colorize: true
             }),
             new(winston.transports.DailyRotateFile)({
-                level: 'verbose', // silly, debug, verbose, info, warn, error
+                level: 'info', // silly, debug, verbose, info, warn, error
                 filename: path.join(settings.LOG_DIR, 'app-'),
                 datePattern: 'yyyy-MM-dd.log',
                 maxsize: 5242880 /* 5MB */
