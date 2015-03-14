@@ -19,7 +19,7 @@ module.exports = function (server) {
         config: {
             description: 'Get server status',
             //notes: 'Returns a todo item by the id passed in the path',
-            tags: ['api']
+            tags: ['test']
             //validate: {
             //    params: {
             //        username: Joi.number().required().description('the id for the todo item')
@@ -38,7 +38,7 @@ module.exports = function (server) {
         config: {
             description: 'Get server status',
             //notes: 'Returns a todo item by the id passed in the path',
-            tags: ['api']
+            tags: ['test']
             //validate: {
             //    params: {
             //        username: Joi.number().required().description('the id for the todo item')

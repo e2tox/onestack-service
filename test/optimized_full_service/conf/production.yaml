@@ -1,7 +1,7 @@
 ---
 # application info
 TITLE: 'OneStack'
-DESCRIPTION: 'OneStack Enterprise Server'
+DESCRIPTION: 'OneStack Enterprise Service Platform'
 KEYWORDS: 'api rest json'
 URL: 'http://sandbox.onestack.io/scaffold/v1/'
 HOST: '0.0.0.0'

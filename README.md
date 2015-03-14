@@ -1,8 +1,8 @@
 OneStack Enterprise Service Platform
 ====================================
 
-[![Build Status](https://img.shields.io/travis/e2tox/OneStack.svg?style=flat)](https://travis-ci.org/e2tox/OneStack)
-[![Coverage Status](https://img.shields.io/coveralls/e2tox/onestack/master.svg?style=flat)](https://coveralls.io/r/e2tox/onestack?branch=master)
+[![Build Status](https://img.shields.io/travis/e2tox/onestack-service.svg?style=flat)](https://travis-ci.org/e2tox/onestack-service)
+[![Coverage Status](https://img.shields.io/coveralls/e2tox/onestack-service/master.svg?style=flat)](https://coveralls.io/r/e2tox/onestack-service?branch=master)
 
 OneStack is an platform for developing enterprise applications.
 

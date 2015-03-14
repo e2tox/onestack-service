@@ -7,6 +7,9 @@ KEYWORDS: 'api rest json'
 URL: 'http://sandbox.onestack.io/scaffold/v1/'
 HOST: '0.0.0.0'
 
+# Explorer will display the tagged services
+EXPLORE_SERVICE_TAGS: 'ping,test'
+
 # PaaS will always set the PORT environment variable
 PORT:
 

@@ -8,23 +8,26 @@
     "url": "git@git.erealm.cn:onestack/service.git"
   },
   "engines": {
-    "node": ">=0.10.x",
-    "npm": ">=1.4.x"
+    "node": ">=0.12.x"
   },
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt coverage",
     "test-on-travis": "./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
+    "boom": "^2.6.1",
     "glob": "^5.0.0",
-    "hapi": "^8.0.0",
-    "joi": "^6.0.0",
-    "lodash": "^3.5.0",
-    "onestack": "^1.0.8",
-    "onestack-hapi-swagger": "^0.6.2",
+    "hapi": "^8.4.0",
+    "onestack": "^1.0.15",
+    "onestack-service-spec": "git+ssh://git@git.erealm.cn:onestack/service-spec.git#master",
+    "onestack-service-ui": "git+ssh://git@git.erealm.cn:onestack/service-ui.git#master",
     "swig": "^1.4.2",
-    "winston": "^0.9.0",
-    "boom": "^2.6.1"
+    "winston": "^0.9.0"
+  },
+  "peerDependencies": {
+    "config": ">=0.0.1",
+    "joi": "6.x.x",
+    "lodash": "3.x.x"
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
