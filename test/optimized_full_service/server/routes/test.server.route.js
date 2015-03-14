@@ -45,7 +45,7 @@ module.exports = function (server) {
         },
         config: {
             description: 'Get server status',
-            tags: ['api']
+            tags: ['api', 'login']
         }
     });
 
@@ -59,7 +59,7 @@ module.exports = function (server) {
         },
         config: {
             description: 'Get server status',
-            tags: ['api']
+            tags: ['api', 'server']
         }
     });
 };
