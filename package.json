@@ -8,7 +8,7 @@
     "url": "git@git.erealm.cn:onestack/service.git"
   },
   "engines": {
-    "node": ">=0.12.x"
+    "node": ">=0.10.x"
   },
   "scripts": {
     "test": "node_modules/grunt-cli/bin/grunt coverage",
