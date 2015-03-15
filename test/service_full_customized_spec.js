@@ -31,32 +31,24 @@ describe('Init with full customized settings', function () {
     it('should able to check service status', function (done) {
         (function () {
             onestack.init(__dirname + '/full_customized_service');
-            onestack.start(function() {
-                onestack.server.inject({
-                    method: 'GET',
-                    url: '/api/v1/ping'
-                }, function(res) {
-                    res.statusCode.should.equal(200);
-                    onestack.stop(function() {
-                        done();
-                    });
-                });
+            onestack.server.inject({
+                method: 'GET',
+                url: '/ping'
+            }, function(res) {
+                res.statusCode.should.equal(200);
+                done();
             });
         }).should.not.throw();
     });
     it('should return 404', function (done) {
         (function () {
             onestack.init(__dirname + '/full_customized_service');
-            onestack.start(function() {
-                onestack.server.inject({
-                    method: 'GET',
-                    url: '/api/v1/not_exists'
-                }, function(res) {
-                    res.statusCode.should.equal(404);
-                    onestack.stop(function() {
-                        done();
-                    });
-                });
+            onestack.server.inject({
+                method: 'GET',
+                url: '/api/v1/not_exists'
+            }, function(res) {
+                res.statusCode.should.equal(404);
+                done();
             });
         }).should.not.throw();
     });
