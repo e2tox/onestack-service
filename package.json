@@ -18,7 +18,7 @@
     "boom": "^2.6.1",
     "glob": "^5.0.0",
     "hapi": "^8.4.0",
-    "onestack": "^1.0.15",
+    "onestack": "^1.1.0",
     "onestack-service-spec": "git+ssh://git@git.erealm.cn:onestack/service-spec.git#master",
     "onestack-service-ui": "git+ssh://git@git.erealm.cn:onestack/service-ui.git#master",
     "swig": "^1.4.2",
