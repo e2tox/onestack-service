@@ -15,17 +15,17 @@
     "test-on-travis": "./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
+    "onestack": "^1.2.0",
     "boom": "^2.6.1",
     "glob": "^5.0.0",
     "hapi": "^8.4.0",
-    "onestack": "^1.1.0",
     "onestack-service-spec": "git+ssh://git@git.erealm.cn:onestack/service-spec.git#master",
     "onestack-service-ui": "git+ssh://git@git.erealm.cn:onestack/service-ui.git#master",
     "swig": "^1.4.2",
     "winston": "^0.9.0"
   },
   "peerDependencies": {
-    "config": ">=0.0.1",
+    "onestack": "^1.2.0",
     "joi": "6.x.x",
     "lodash": "3.x.x"
   },

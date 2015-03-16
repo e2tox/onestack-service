@@ -6,23 +6,25 @@
 
 
 // Init the configuration module.
-var onestack = require('../index');
-var should = require('should');
 
+var should = require('should');
+var onestack = require('onestack');
+var Server = require('../index');
+var app = new Server(onestack);
 
 describe('Init with full customized settings', function () {
     it('should contains PORT number', function (done) {
         (function () {
-            onestack.init(__dirname + '/full_customized_service');
-            onestack.settings().should.have.property('PORT', 11020);
+            app.init(__dirname + '/full_customized_service');
+            app.settings().should.have.property('PORT', 11020);
             done();
         }).should.not.throw();
     });
     it('should able to start and stop service', function (done) {
         (function () {
-            onestack.init(__dirname + '/full_customized_service');
-            onestack.start(function() {
-                onestack.stop(function() {
+            app.init(__dirname + '/full_customized_service');
+            app.start(function() {
+                app.stop(function() {
                     done();
                 });
             });
@@ -30,8 +32,8 @@ describe('Init with full customized settings', function () {
     });
     it('should able to check service status', function (done) {
         (function () {
-            onestack.init(__dirname + '/full_customized_service');
-            onestack.server.inject({
+            app.init(__dirname + '/full_customized_service');
+            app.server.inject({
                 method: 'GET',
                 url: '/ping'
             }, function(res) {
@@ -42,8 +44,8 @@ describe('Init with full customized settings', function () {
     });
     it('should return 404', function (done) {
         (function () {
-            onestack.init(__dirname + '/full_customized_service');
-            onestack.server.inject({
+            app.init(__dirname + '/full_customized_service');
+            app.server.inject({
                 method: 'GET',
                 url: '/api/v1/not_exists'
             }, function(res) {
