@@ -9,12 +9,12 @@
 var should = require('should');
 var onestack = require('onestack');
 var Server = require('../index');
-var app = new Server(onestack);
 
 
 describe('Init with optimized full customized settings', function () {
     it('should return 500 error', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
             app.server.inject({
                 method: 'GET',
@@ -28,6 +28,7 @@ describe('Init with optimized full customized settings', function () {
 
     it('should get xml error', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
             app.server.inject({
                 method: 'GET',
@@ -42,6 +43,7 @@ describe('Init with optimized full customized settings', function () {
 
     it('should get html error', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
             app.server.inject({
                 method: 'GET',
@@ -56,6 +58,7 @@ describe('Init with optimized full customized settings', function () {
 
     it('should get logs', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
             app.server.inject({
                 method: 'GET',
@@ -70,6 +73,7 @@ describe('Init with optimized full customized settings', function () {
 
     it('should get 401 error', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
             app.server.inject({
                 method: 'GET',
@@ -83,6 +87,7 @@ describe('Init with optimized full customized settings', function () {
 
     it('should get timeout error', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
             app.server.inject({
                 method: 'GET',

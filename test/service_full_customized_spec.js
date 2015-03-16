@@ -10,11 +10,12 @@
 var should = require('should');
 var onestack = require('onestack');
 var Server = require('../index');
-var app = new Server(onestack);
+
 
 describe('Init with full customized settings', function () {
     it('should contains PORT number', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/full_customized_service');
             app.settings().should.have.property('PORT', 11020);
             done();
@@ -22,6 +23,7 @@ describe('Init with full customized settings', function () {
     });
     it('should able to start and stop service', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/full_customized_service');
             app.start(function() {
                 app.stop(function() {
@@ -32,6 +34,7 @@ describe('Init with full customized settings', function () {
     });
     it('should able to check service status', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/full_customized_service');
             app.server.inject({
                 method: 'GET',
@@ -44,6 +47,7 @@ describe('Init with full customized settings', function () {
     });
     it('should return 404', function (done) {
         (function () {
+            var app = new Server(onestack);
             app.init(__dirname + '/full_customized_service');
             app.server.inject({
                 method: 'GET',
