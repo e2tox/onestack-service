@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+'use strict';
+
+/**
+ * Test Module dependencies.
+ */
+
+
+// Init the configuration module
+var path = require('path');
+var service = require('../../../index');
+
+service.init(path.join(__dirname, '..'));
+service.start();
