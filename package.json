@@ -5,7 +5,7 @@
   "version": "1.1.0",
   "repository": {
     "type": "git",
-    "url": "git@git.erealm.cn:onestack/service.git"
+    "url": "git@bitbucket.org:onestack/service.git"
   },
   "engines": {
     "node": ">=0.10.x"
@@ -20,8 +20,8 @@
     "glob": "^5.0.0",
     "hapi": "^8.4.0",
     "onestack": "^1.2.0",
-    "onestack-service-spec": "git+ssh://git@git.erealm.cn:onestack/service-spec.git#master",
-    "onestack-service-ui": "git+ssh://git@git.erealm.cn:onestack/service-ui.git#master",
+    "onestack-service-spec": "git+ssh://git@bitbucket.org:onestack/service-spec.git#master",
+    "onestack-service-ui": "git+ssh://git@bitbucket.org:onestack/service-ui.git#master",
     "swig": "^1.4.2",
     "winston": "^0.9.0"
   },
