@@ -2,7 +2,7 @@
   "name": "onestack-service",
   "description": "OneStack Enterprise Service Platform",
   "author": "Ling",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "repository": {
     "type": "git",
     "url": "git@bitbucket.org:onestack/service.git"
