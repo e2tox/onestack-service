@@ -23,9 +23,10 @@
     "onestack-service-spec": "git+ssh://git@bitbucket.org:onestack/service-spec.git#master",
     "onestack-service-ui": "git+ssh://git@bitbucket.org:onestack/service-ui.git#master",
     "swig": "^1.4.2",
-    "winston": "^0.9.0"
+    "winston": "^1.0.0"
   },
   "peerDependencies": {
+    "winston": "^1.0.0",
     "onestack": "^1.2.0",
     "joi": "6.x.x",
     "lodash": "3.x.x"
