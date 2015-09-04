@@ -2,7 +2,7 @@
   "name": "onestack-service",
   "description": "OneStack Enterprise Service Platform",
   "author": "Ling",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "repository": {
     "type": "git",
     "url": "git@bitbucket.org:onestack/service.git"
@@ -22,8 +22,7 @@
     "onestack": "^1.2.0",
     "onestack-service-spec": "git+ssh://git@bitbucket.org:onestack/service-spec.git#master",
     "onestack-service-ui": "git+ssh://git@bitbucket.org:onestack/service-ui.git#master",
-    "swig": "^1.4.2",
-    "winston": "^1.0.0"
+    "swig": "^1.4.2"
   },
   "peerDependencies": {
     "onestack": "^1.2.0",
