@@ -4,7 +4,6 @@ OneStack Enterprise Service Platform
 [![Build Status](https://img.shields.io/travis/e2tox/onestack-service.svg?style=flat)](https://travis-ci.org/e2tox/onestack-service)
 [![Coverage Status](https://img.shields.io/coveralls/e2tox/onestack-service/master.svg?style=flat)](https://coveralls.io/r/e2tox/onestack-service?branch=master)
 
-
 ### Projects
 
 #### OneStack 
@@ -84,8 +83,32 @@ instance.init(__dirname);
 instance.start();
 ```
 
-#### 4. Explorer Your API
+#### 4. Useful console output for logging and analysis
+![Console Output](https://raw.githubusercontent.com/e2tox/images/master/onestack.png)
+
+#### 5. Explorer Your API
 http://localhost:11020/explorer
 
-![API Explorer](https://raw.githubusercontent.com/e2tox/images/master/screen.png)
+![API Explorer](https://raw.githubusercontent.com/e2tox/images/master/onestack-service.png)
 
+#### Extra: Check and Read Settings
+
+``` javascript
+var app = require('onestack');
+
+if (app.has('PORT')) {
+    console.log(app.get('PORT'));
+}
+```
+
+#### Extra: Write Log
+
+``` javascript
+var app = require('onestack');
+
+app.debug('this is info');
+app.verbose('this is info');
+app.info('this is info');
+app.warn('this is info');
+app.error('this is info');
+```
