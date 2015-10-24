@@ -1,4 +1,5 @@
 ### 2.0.0
+ - Long Term Support
  - Update dependencies
 
 ### 1.1.5
