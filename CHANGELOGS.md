@@ -1,3 +1,6 @@
+### 2.0.0
+ - Update dependencies
+
 ### 1.1.5
  - Improve messages
 

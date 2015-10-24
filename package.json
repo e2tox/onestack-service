@@ -2,10 +2,10 @@
   "name": "onestack-service",
   "description": "OneStack Enterprise Service Platform",
   "author": "Ling",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:onestack/service.git"
+    "url": "git@gitlab.com:onestack/service.git"
   },
   "engines": {
     "node": ">=0.10.x"
@@ -15,19 +15,15 @@
     "test-on-travis": "./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
-    "boom": "^2.6.1",
+    "boom": "^2.9.0",
     "cron-parser": "^0.6.1",
     "glob": "^5.0.0",
-    "hapi": "^8.4.0",
+    "hapi": "^11.0.0",
+    "inert": "^3.1.0",
     "onestack": "^1.2.0",
-    "onestack-service-spec": "git+ssh://git@bitbucket.org:onestack/service-spec.git#master",
-    "onestack-service-ui": "git+ssh://git@bitbucket.org:onestack/service-ui.git#master",
-    "swig": "^1.4.2"
-  },
-  "peerDependencies": {
-    "onestack": "^1.2.0",
-    "joi": "6.x.x",
-    "lodash": "3.x.x"
+    "swig": "^1.4.2",
+    "vision": "^3.0.0",
+    "handlebars": "^4.0.3"
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
