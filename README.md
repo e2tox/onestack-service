@@ -15,6 +15,9 @@ YAML based configuration management and Winston based logging system - ALL IN PL
 npm install onestack
 ```
 
+URL: [https://github.com/e2tox/onestack](https://github.com/e2tox/onestack)
+
+
 #### OneStack Service Platform
 
 
@@ -22,6 +25,8 @@ HAPI backed API server which comes with awesome swagger UI.
 ```
 npm install onestack-service
 ```
+
+URL: [https://github.com/e2tox/onestack-service](https://github.com/e2tox/onestack-service)
 
 ### Create Your Project
 
@@ -81,3 +86,6 @@ instance.start();
 
 #### 4. Explorer Your API
 http://localhost:11020/explorer
+
+![API Explorer](https://raw.githubusercontent.com/e2tox/images/master/screen.png)
+
