@@ -12,7 +12,7 @@ var Server = require('../index');
 
 
 describe('Init with optimized full customized settings', function () {
-    it('should return 500 error', function (done) {
+    it('should return 500 error', function () {
         (function () {
             var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
@@ -21,12 +21,11 @@ describe('Init with optimized full customized settings', function () {
                 url: '/api/v1/throw'
             }, function(res) {
                 res.statusCode.should.equal(500);
-                done();
             });
         }).should.throw();
     });
 
-    it('should get xml error', function (done) {
+    it('should get xml error', function () {
         (function () {
             var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
@@ -36,12 +35,11 @@ describe('Init with optimized full customized settings', function () {
                 headers: { 'accept': 'xml' }
             }, function(res) {
                 res.statusCode.should.equal(500);
-                done();
             });
         }).should.throw();
     });
 
-    it('should get html error', function (done) {
+    it('should get html error', function () {
         (function () {
             var app = new Server(onestack);
             app.init(__dirname + '/optimized_full_service');
@@ -51,7 +49,6 @@ describe('Init with optimized full customized settings', function () {
                 headers: { 'accept': 'html' }
             }, function(res) {
                 res.statusCode.should.equal(500);
-                done();
             });
         }).should.throw();
     });
