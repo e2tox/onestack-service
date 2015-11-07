@@ -23,7 +23,7 @@ describe('Init with optimized full customized settings', function () {
                 res.statusCode.should.equal(500);
                 done();
             });
-        }).should.not.throw();
+        }).should.throw();
     });
 
     it('should get xml error', function (done) {
@@ -38,7 +38,7 @@ describe('Init with optimized full customized settings', function () {
                 res.statusCode.should.equal(500);
                 done();
             });
-        }).should.not.throw();
+        }).should.throw();
     });
 
     it('should get html error', function (done) {
@@ -53,7 +53,7 @@ describe('Init with optimized full customized settings', function () {
                 res.statusCode.should.equal(500);
                 done();
             });
-        }).should.not.throw();
+        }).should.throw();
     });
 
     it('should get logs', function (done) {
