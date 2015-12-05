@@ -6,10 +6,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:onestack/service.git"
+    "url": "git@github.com:e2tox/onestack-service.git"
   },
   "engines": {
-    "node": ">=4.2.1",
+    "node": ">=4.2.0",
     "npm": ">=2.14.7"
   },
   "scripts": {
