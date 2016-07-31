@@ -169,7 +169,7 @@ module.exports = function(settings, routes, tags) {
             utils.setNotEmpty(baseOperation, 'summary', routeSettings.description);
             utils.setNotEmpty(baseOperation, 'description', routeSettings.notes);
 
-            if (_.contains(tags, 'deprecated')) {
+            if (_.includes(tags, 'deprecated')) {
                 baseOperation.deprecated = true;
             }
 

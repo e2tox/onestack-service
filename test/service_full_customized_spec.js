@@ -25,8 +25,8 @@ describe('Init with full customized settings', function () {
         (function () {
             var app = new Server(onestack);
             app.init(__dirname + '/full_customized_service');
-            app.start(function() {
-                app.stop(function() {
+            app.start(function () {
+                app.stop(function () {
                     done();
                 });
             });
@@ -39,7 +39,20 @@ describe('Init with full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/ping'
-            }, function(res) {
+            }, function (res) {
+                res.statusCode.should.equal(200);
+                done();
+            });
+        }).should.not.throw();
+    });
+    it('should able to access api spec', function (done) {
+        (function () {
+            var app = new Server(onestack);
+            app.init(__dirname + '/full_customized_service');
+            app.server.inject({
+                method: 'GET',
+                url: '/spec'
+            }, function (res) {
                 res.statusCode.should.equal(200);
                 done();
             });
@@ -52,7 +65,7 @@ describe('Init with full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/not_exists'
-            }, function(res) {
+            }, function (res) {
                 res.statusCode.should.equal(404);
                 done();
             });

@@ -16,8 +16,8 @@ describe('Init with enable tasks settings', function () {
         (function () {
             var app = new Server(onestack);
             app.init(__dirname + '/enable_tasks_service');
-            app.start(function(){
-                app.stop(function(){
+            app.start(function () {
+                app.stop(function () {
                     done();
                 });
             });

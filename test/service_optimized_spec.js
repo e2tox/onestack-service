@@ -19,7 +19,7 @@ describe('Init with optimized full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/throw'
-            }, function(res) {
+            }, function (res) {
                 res.statusCode.should.equal(500);
             });
         }).should.throw();
@@ -32,8 +32,10 @@ describe('Init with optimized full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/throw',
-                headers: { 'accept': 'xml' }
-            }, function(res) {
+                headers: {
+                    'accept': 'xml'
+                }
+            }, function (res) {
                 res.statusCode.should.equal(500);
             });
         }).should.throw();
@@ -46,8 +48,10 @@ describe('Init with optimized full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/throw',
-                headers: { 'accept': 'html' }
-            }, function(res) {
+                headers: {
+                    'accept': 'html'
+                }
+            }, function (res) {
                 res.statusCode.should.equal(500);
             });
         }).should.throw();
@@ -60,7 +64,7 @@ describe('Init with optimized full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/logs'
-            }, function(res) {
+            }, function (res) {
                 res.statusCode.should.equal(200);
                 done();
             });
@@ -75,7 +79,7 @@ describe('Init with optimized full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/access_denied'
-            }, function(res) {
+            }, function (res) {
                 res.statusCode.should.equal(401);
                 done();
             });
@@ -89,7 +93,7 @@ describe('Init with optimized full customized settings', function () {
             app.server.inject({
                 method: 'GET',
                 url: '/api/v1/timeout'
-            }, function(res) {
+            }, function (res) {
                 res.statusCode.should.equal(500);
                 done();
             });
