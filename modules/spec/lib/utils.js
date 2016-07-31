@@ -38,7 +38,7 @@ utils.generateNameFromSchema = function(schema) {
         return 'Array';
     } else {
         var children = Hoek.reach(schema, '_inner.children');
-        keys = _.map(_.pluck(children, 'key'), utils.firstCharToUpperCase);
+        keys = _.map(_.map(children, 'key'), utils.firstCharToUpperCase);
     }
 
     if (_.isEmpty(keys)) {
@@ -207,7 +207,7 @@ utils.generateFallbackName = function(modelName) {
 var primitiveSwaggerTypes = ['integer', 'number', 'string', 'boolean', 'string'];
 
 utils.isPrimitiveSwaggerType = function(type) {
-    return _.contains(primitiveSwaggerTypes, type);
+    return _.includes(primitiveSwaggerTypes, type);
 };
 
 utils.setNotEmpty = function(target, key, value) {
