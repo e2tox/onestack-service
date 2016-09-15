@@ -238,7 +238,7 @@ utils.getMeta = function(schema, key) {
 };
 
 utils.generateName = function(schema) {
-    return utils.getMeta(schema, 'className') || utils.generateNameFromSchema(schema);
+    return utils.getMeta(schema, 'className') || 'Payload';
 };
 
 utils.generateNameWithFallback = function(schema, definitions, definition) {
